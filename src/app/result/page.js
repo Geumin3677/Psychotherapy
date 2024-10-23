@@ -149,7 +149,7 @@ export default function Home() {
           <div className="comment asdf">불러오는중...</div>
         </div>
         <div className="comCxt song">
-          <div className="songT">Today's Playlist</div>
+          <div className="songT">Today&apos;s Playlist</div>
           
           <div className="playlist">
             {
