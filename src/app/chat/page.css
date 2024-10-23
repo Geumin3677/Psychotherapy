@@ -1,0 +1,203 @@
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: url("../../../public/bg.png");
+    background-color: #222026;
+    background-size: cover;
+    min-height: 100vh;
+    max-height: 100vh;
+    transition: 1s;
+}
+
+.container1.emRed {
+    background-color: #771818;
+}
+
+.container1.emBlue {
+    background-color: #5B4ABF;
+}
+
+.container1.emGreen {
+    background-color: #1d6e4c;
+}
+
+.container1.emYellow {
+    background-color: #eeca47;
+}
+
+.profileCxt {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.profileImg {
+    height: 4.5vw;
+    border-radius: 3vh;
+}
+
+.profileName {
+    font-family: 'GmarketSansLight';
+    color: white;
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+}
+
+.inputCxt {
+    background-color: white;
+    border-radius: 50em;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #433852;
+    margin-bottom: 50px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.deco {
+    font-size: 20px;
+    margin-top: 1px;
+    margin-left: 10px;
+    font-family: 'GmarketSansMedium';
+    user-select: none;
+}
+
+.input {
+    flex: 1 0 auto;
+    margin-left: 5px;
+    height: 100%;
+    background: none;
+    border: none;
+    font-size: 1.7vw;
+    /* font-family: 'GmarketSansMedium'; */
+    font-weight: bold;
+    color: #433852;
+    text-wrap: normal;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.sendBtn {
+    height: 1.5em;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-family: 'GmarketSansMedium'; */
+    font-weight: bold;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    transition: .5s;
+    margin:2px;
+}
+
+.sendBtn:hover {
+    transform: scale(1.1);
+}
+.sendBtn:active {
+    transform: scale(0.9)
+}
+
+
+.chatCxt {
+    flex-grow: 1;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0px 120px 0px 120px;
+    font-size: 2vw;
+    color: white;
+    overflow-x: scroll;
+    /* font-family: 'GmarketSansLight'; */
+    
+}
+
+.chatCxt::-webkit-scrollbar {
+    display: none;
+}
+
+.chatCxt::before {
+    position: absolute;
+    content: "";
+    width: calc(100vw - 240px);
+    height: 27vh;
+    background-color: #222026;
+    backdrop-filter: blur(1.5px);
+    mask: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(255, 255, 255) 110%);  
+    transition: 1s;
+    opacity: 1;
+}
+
+.emRed .chatCxt::before {
+    background-color: #771818;
+}
+.emBlue .chatCxt::before {
+    background-color: #5B4ABF;
+}
+.emGreen .chatCxt::before {
+    background-color: #1d6e4c;
+}
+.emYellow .chatCxt::before {
+    background-color: #eeca47;
+}
+
+
+.chatCxt#off {
+    &::before {
+        backdrop-filter: blur(0px);
+        opacity: 0;
+    }
+}
+
+.AIchat {
+    /* font-family: 'GmarketSansMedium'; */
+    font-weight: bold;
+    display: flex;
+    width: 70%;
+    margin-bottom: 40px;
+}
+
+.MYchat {
+    text-align: right;
+    margin-bottom: 40px;
+    max-width: 70%;
+    margin-left: auto;
+    white-space: normal;
+}
+
+.deco2 {
+    margin-right: 10px;
+}
+
+.opa {
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 800px) { 
+    .profileName {
+        font-size: 20px;
+    }
+    .chatCxt {
+        padding: 0 20px 0 20px;
+        font-size: 15px;
+    }
+    .AIchat{
+        width: 90%;
+    }
+    .inputCxt {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .input{
+        height: 100%;
+        font-size: 15px;
+    }
+}
